@@ -8,6 +8,15 @@ import MessageIcon from '@mui/icons-material/Message';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+function Header() {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  const logOutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
 function Header() {
   return (
     <div  className='header' >
